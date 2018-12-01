@@ -32,12 +32,18 @@ h3 {
 }
 
 .header {
-  margin-bottom: 3rem;
+  margin-bottom: 10%;
 }
 
 .title {
-  margin-top: 10rem;
+  margin-top: 15%;
   text-align: center;
+}
+
+.subheading {
+  color: $brown;
+  font-size: 2.5rem;
+  font-weight: 500;
 }
 
 a {
@@ -47,19 +53,21 @@ a {
 .navbar {
   background-color: white;
   .navbar-nav {
-    padding-right: 15rem;
+    padding-right: 10%;
   }
 
   .navbar-brand {
-    padding-left: 15rem;
+    padding-left: 10%;
   }
 
   .navbar-toggler {
-    margin-right: 15rem;
+    margin-right: 10%;
   }
 
   .nav-link {
-    margin-left: 2rem;
+    margin-left: 5%;
+    font-size: 1.25rem;
+
     &:hover {
       border-bottom: 3px solid $green;
     }
@@ -72,10 +80,16 @@ section {
     width: 100%;
    height: 100vh;
     background-color: $lightGray;
-      padding: 10rem 15rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      padding: 15% 10%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+      .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
 
     h1{
       text-align: left;
@@ -87,7 +101,8 @@ section {
     }
 
     img {
-      height: 30rem;
+      max-height: 100%;
+      width: auto;
       border-radius: 100%;
       border: 1rem solid white;
     }
@@ -119,7 +134,7 @@ section {
   }
 
   &.padded {
-  		padding: 10rem 15rem;
+  		padding: 8% 10%;
   	}
 
     &.brown {
@@ -142,15 +157,13 @@ section {
 	}
 }
 
-// .port-img {
-//   height: 80%;
-// }
 
 .port-container {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 25rem;
+  text-align: center;
 }
 
 
@@ -190,20 +203,13 @@ section {
 
 .row {
   display: flex;
-  // justify-content: space-between;
+  &.wrap {
+    flex-wrap: wrap;
+  }
+
 }
 
 .column {
-  padding: auto 15rem;
-}
+  padding: auto 10%;
 
-.column-small {
-  width: 34%;
-}
-.column-med {
-  width: 50%;
-}
-.column-large {
-  width: 66%;
-  padding-left: 10rem;
 }
