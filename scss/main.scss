@@ -52,18 +52,20 @@ a {
 
 .navbar {
   background-color: white;
+    padding-right: 10%;
+      padding-left: 10%;
   .navbar-nav {
     // padding: 0% 10%;
-    padding-right: 10rem;
+    // padding-right: 10%;
   }
+  //
+  // .navbar-brand {
+  //   padding-left: 10%;
+  // }
 
-  .navbar-brand {
-    padding-left: 10%;
-  }
-
-  .navbar-toggler {
-    margin-right: 10%;
-  }
+  // .navbar-toggler {
+  //   margin-right: 10%;
+  // }
 
   .nav-link {
     margin-left: 5%;
