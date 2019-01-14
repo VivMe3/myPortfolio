@@ -101,36 +101,32 @@
 
     <div class="modal-content">
       <span class="close cursor" onclick="closeModal()">&times;</span>
-      <div class="mySlides">
+      <div class="modalSlides">
           <img src="./imgs/hand-done/line1.jpg" alt="Line Art Studies 1" title="Line Art Studies 1" />
       </div>
 
-      <div class="mySlides">
+      <div class="modalSlides">
         <img src="./imgs/hand-done/line2.jpg" alt="Line Art Studies 2" title="Line Art Studies 2"/>
       </div>
 
-      <div class="mySlides">
+      <div class="modalSlides">
         <img src="./imgs/hand-done/line3.jpg" alt="Line Art Studies 3" title="Line Art Studies 3" />
       </div>
 
-      <div class="mySlides">
+      <div class="modalSlides">
           <img src="./imgs/hand-done/drips.jpg" alt="Drips" title="Drips" />
       </div>
 
-      <div class="mySlides">
+      <div class="modalSlides">
         <img src="./imgs/hand-done/bunny.jpg" alt="Bunny" title="Bunny" />
       </div>
 
-      <div class="mySlides">
+      <div class="modalSlides">
           <img src="./imgs/hand-done/self-portrait.JPG" alt="Self Portrait" title="Self Portrait" />
       </div>
 
       <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
       <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-      <div class="caption-container">
-        <p id="caption"></p>
-      </div>
 
       <div style="text-align:center">
         <span class="dot" onclick="currentSlide(1)"></span>
@@ -174,7 +170,7 @@
 
   function showSlides(n) {
     var i;
-    var slides = document.getElementsByClassName("mySlides");
+    var slides = document.getElementsByClassName("modalSlides");
     var dots = document.getElementsByClassName("dot");
     if (n > slides.length) {slideIndex = 1}
     if (n < 1) {slideIndex = slides.length}

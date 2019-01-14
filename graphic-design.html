@@ -97,33 +97,29 @@
 
     <div class="modal-content">
       <span class="close cursor" onclick="closeModal()">&times;</span>
-      <div class="mySlides">
+      <div class="modalSlides">
         <img src="./imgs/graphic-design/graphic-design-poster.png" alt="Graphic Design Seminar Flyer"  title="Graphic Design Seminar Flyer"/>
       </div>
 
-      <div class="mySlides">
+      <div class="modalSlides">
         <img src="./imgs/graphic-design/mcf-events.png" alt="MCF Events Flyer" title="MCF Events Flyer"/>
       </div>
 
-      <div class="mySlides">
+      <div class="modalSlides">
         <img src="./imgs/graphic-design/family-leave.png" alt="Paid Family Leave Poster" title="Paid Family Leave Poster"/>
       </div>
 
-      <div class="mySlides">
+      <div class="modalSlides">
         <img src="./imgs/graphic-design/deadline.png" alt="Course Deadline Poster" title="Course Deadline Poster"/>
       </div>
 
-      <div class="mySlides">
+      <div class="modalSlides">
         <img src="./imgs/graphic-design/mathematics-program-guide.JPG" alt="Mathematics Program Guide" title="Mathematics Program Guide"/>
         <img src="./imgs/graphic-design/mathematics-program-guide-2.JPG" alt="Mathematics Program Guide Inside" title="Mathematics Program Guide Inside"/>
       </div>
 
       <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
       <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-      <div class="caption-container">
-        <p id="caption"></p>
-      </div>
 
       <div style="text-align:center">
         <span class="dot" onclick="currentSlide(1)"></span>
@@ -166,7 +162,7 @@
 
   function showSlides(n) {
     var i;
-    var slides = document.getElementsByClassName("mySlides");
+    var slides = document.getElementsByClassName("modalSlides");
     var dots = document.getElementsByClassName("dot");
     if (n > slides.length) {slideIndex = 1}
     if (n < 1) {slideIndex = slides.length}

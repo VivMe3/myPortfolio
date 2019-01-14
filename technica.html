@@ -51,21 +51,32 @@
     <div class="container">
 
       <div class="row wrap">
-        <div class="col-12 col-sm-6 col-md-4 port-container">
-<img src="./imgs/technica/Intro-Wksp-Sched.png" height=90%/>
-        </div>
-        <div class="col-12 col-sm-6 col-md-4 port-container">
-<img src="./imgs/technica/Tech+X-Sched.png" height=90%/>
+        <figure class="col-12 col-sm-12 col-md-6 col-lg-4 port-container">
+          <img src="./imgs/technica/intro-wksp-sched.PNG" height=100%/ alt="Intro Workshops Schedule" title="Intro Workshops Schedule" onclick="openModal();currentSlide(1)">
+          <figcaption>
+            <i>Intro Workshops Schedule</i><br />Illustrator
+          </figcaption>
+        </figure>
+        <figure class="col-12 col-sm-12 col-md-6 col-lg-4 port-container">
+          <img src="./imgs/technica/tech+X-sched.PNG" height=100% onclick="openModal();currentSlide(2)" alt="Tech+X Schedule" title="Tech+X Schedule"/>
+          <figcaption>
+            <i>Tech+X Schedule</i><br />Illustrator
+          </figcaption>
+        </figure>
 
-        </div>
+        <figure class="col-12 col-sm-12 col-md-6 col-lg-4 port-container">
+          <img src="./imgs/technica/3days-donuts.PNG" height=100% onclick="openModal();currentSlide(3)" alt="Technica Countdown Graphic" title="Technica Countdown Graphic"/>
+          <figcaption>
+            <i>Technica Countdown Graphic</i><br />Illustrator
+          </figcaption>
+        </figure>
 
-        <div class="col-12 col-sm-6 col-md-4 port-container">
-<img src="./imgs/technica/3days_donuts.png" height=90%/>
-        </div>
-
-        <div class="col-12 col-sm-6 col-md-4 port-container">
-<img src="./imgs/technica/momDay.png" height=90%/>
-        </div>
+        <figure class="col-12 col-sm-12 col-md-6 col-lg-4 port-container">
+          <img src="./imgs/technica/mothers-day.PNG" height=100% onclick="openModal();currentSlide(4)" alt="Mother's Day Graphic" title="Mother's Day Graphic"/>
+          <figcaption>
+            <i>Mother's Day Graphic</i><br />Illustrator
+          </figcaption>
+        </figure>
 
 
       </div>
@@ -74,7 +85,38 @@
     </div>
   </section>
 
+  <div id="myModal" class="modal">
 
+    <div class="modal-content">
+      <span class="close cursor" onclick="closeModal()">&times;</span>
+      <div class="modalSlides">
+      <img src="./imgs/technica/intro-wksp-sched.PNG" alt="Intro Workshops Schedule" title="Intro Workshops Schedule" />
+      </div>
+
+      <div class="modalSlides">
+        <img src="./imgs/technica/tech+X-sched.PNG" alt="Tech+X Schedule" title="Tech+X Schedule"/>
+      </div>
+
+      <div class="modalSlides">
+        <img src="./imgs/technica/3days-donuts.PNG" alt="Technica Countdown Graphic" title="Technica Countdown Graphic"/>
+      </div>
+
+      <div class="modalSlides">
+        <img src="./imgs/technica/mothers-day.PNG"  alt="Mother's Day Graphic" title="Mother's Day Graphic"/>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+      </div>
+
+    </div>
+  </div>
 
 
 
@@ -83,6 +125,42 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
+  <script>
+  function openModal() {
+    document.getElementById('myModal').style.display = "block";
+  }
+
+  function closeModal() {
+    document.getElementById('myModal').style.display = "none";
+  }
+
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("modalSlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "flex";
+    dots[slideIndex-1].className += " active";
+  }
+  </script>
 
 </body>
 </html>

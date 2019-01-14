@@ -106,8 +106,8 @@ section {
     img {
       max-height: 100%;
       width: auto;
-      // border-radius: 100%;
-      // border: 1rem solid white;
+      border-radius: 100%;
+      border: 1rem solid white;
     }
   }
 
@@ -292,7 +292,7 @@ figcaption {
   cursor: pointer;
 }
 
-.mySlides {
+.modalSlides {
    display: none;
   justify-content: center;
   img {

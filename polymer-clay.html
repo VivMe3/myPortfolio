@@ -51,28 +51,46 @@
     <div class="container">
 
       <div class="row wrap">
-        <div class="col-12 col-sm-6 col-md-4 port-container">
-<img src="./imgs/polymer-clay/eeyore.jpg" height=90%/>
-        </div>
-        <div class="col-12 col-sm-6 col-md-4 port-container">
-<img src="./imgs/polymer-clay/yoshi.jpg" height=90%/>
+        <figure class="col-12 col-sm-12 col-md-6 col-lg-4 port-container">
+          <img src="./imgs/polymer-clay/eeyore.jpg" height=100%/ alt="Eeyore" title="Eeyore" onclick="openModal();currentSlide(1)">
+          <figcaption>
+            <i>Eeyore</i><br />Polymer Clay
+          </figcaption>
+        </figure>
+        <figure class="col-12 col-sm-12 col-md-6 col-lg-4 port-container">
+          <img src="./imgs/polymer-clay/yoshi.jpg" height=100% onclick="openModal();currentSlide(2)" alt="Yoshi" title="Yoshi"/>
+          <figcaption>
+            <i>Yoshi</i><br />Polymer Clay
+          </figcaption>
+        </figure>
 
-        </div>
+        <figure class="col-12 col-sm-12 col-md-6 col-lg-4 port-container">
+          <img src="./imgs/polymer-clay/peach-mario.jpg" height=100% onclick="openModal();currentSlide(3)" alt="Peach and Mario" title="Peach and Mario"/>
+          <figcaption>
+            <i>Peach and Mario</i><br />Polymer Clay
+          </figcaption>
+        </figure>
 
-        <div class="col-12 col-sm-6 col-md-4 port-container">
-<img src="./imgs/polymer-clay/peach-mario.jpg" height=90%/>
-        </div>
+        <figure class="col-12 col-sm-12 col-md-6 col-lg-4 port-container">
+          <img src="./imgs/polymer-clay/chrysanthemum.jpg" height=100% onclick="openModal();currentSlide(4)" alt="Chrysanthemum" title="Chrysanthemum"/>
+          <figcaption>
+            <i>Chrysanthemum</i><br />Polymer Clay
+          </figcaption>
+        </figure>
 
-        <div class="col-12 col-sm-6 col-md-4 port-container">
-<img src="./imgs/polymer-clay/chrysanthemum.JPG" height=90%/>
-        </div>
-        <div class="col-12 col-sm-6 col-md-4 port-container">
-<img src="./imgs/polymer-clay/testudo.JPG" height=90%/>
-        </div>
-        <div class="col-12 col-sm-6 col-md-4 port-container">
-<img src="./imgs/polymer-clay/wedding-topper.JPG" height=90%/>
-        </div>
+        <figure class="col-12 col-sm-12 col-md-6 col-lg-4 port-container">
+          <img src="./imgs/polymer-clay/testudo.JPG" height=100% onclick="openModal();currentSlide(5)" alt="UMD Testudo" title="UMD Testudo"/>
+          <figcaption>
+            <i>UMD Testudo</i><br />Polymer Clay
+          </figcaption>
+        </figure>
 
+        <figure class="col-12 col-sm-12 col-md-6 col-lg-4 port-container">
+          <img src="./imgs/polymer-clay/wedding-topper.jpg" height=100% onclick="openModal();currentSlide(4)" alt="Wedding Topper" title="Wedding Topper"/>
+          <figcaption>
+            <i>Wedding Topper</i><br />Polymer Clay
+          </figcaption>
+        </figure>
 
       </div>
 
@@ -80,6 +98,49 @@
     </div>
   </section>
 
+
+  <div id="myModal" class="modal">
+
+    <div class="modal-content">
+      <span class="close cursor" onclick="closeModal()">&times;</span>
+      <div class="modalSlides">
+        <img src="./imgs/polymer-clay/eeyore.jpg" alt="Eeyore" title="Eeyore">
+      </div>
+
+      <div class="modalSlides">
+      <img src="./imgs/polymer-clay/yoshi.jpg" alt="Yoshi" title="Yoshi"/>
+      </div>
+
+      <div class="modalSlides">
+        <img src="./imgs/polymer-clay/peach-mario.jpg" alt="Peach and Mario" title="Peach and Mario"/>
+      </div>
+
+      <div class="modalSlides">
+          <img src="./imgs/polymer-clay/chrysanthemum.jpg" alt="Chrysanthemum" title="Chrysanthemum"/>
+      </div>
+
+      <div class="modalSlides">
+        <img src="./imgs/polymer-clay/testudo.JPG" alt="UMD Testudo" title="UMD Testudo"/>
+      </div>
+
+      <div class="modalSlides">
+      <img src="./imgs/polymer-clay/wedding-topper.JPG" alt="Wedding Topper" title="Wedding Topper"/>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+      </div>
+
+    </div>
+  </div>
 
 
 
@@ -89,6 +150,42 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
+  <script>
+  function openModal() {
+    document.getElementById('myModal').style.display = "block";
+  }
+
+  function closeModal() {
+    document.getElementById('myModal').style.display = "none";
+  }
+
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("modalSlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "flex";
+    dots[slideIndex-1].className += " active";
+  }
+  </script>
 
 </body>
 </html>
