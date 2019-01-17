@@ -222,6 +222,12 @@ figcaption {
     color: $darkGray
 }
 
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
 .row {
   display: flex;
   &.wrap {
@@ -232,7 +238,6 @@ figcaption {
 
 .column {
   padding: auto 10%;
-
 }
 
 
