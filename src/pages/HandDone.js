@@ -1,12 +1,7 @@
 import React from 'react';
-import CategoryItem from '../components/CategoryItem';
-import DesignFlyer from '../imgs/graphic-design/graphic-design-poster.png';
-import McfEvents from '../imgs/graphic-design/mcf-events.png';
 import FamilyLeavePoster from '../imgs/graphic-design/family-leave.png';
 import DeadlinePoster from '../imgs/graphic-design/deadline.png';
-import ProgramGuide from '../imgs/graphic-design/mathematics-program-guide.jpg';
 import Modal from '../components/Modal';
-import Carousel from '../components/Carousel';
 
 class HandDone extends React.Component {
 

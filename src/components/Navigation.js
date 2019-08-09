@@ -2,10 +2,10 @@ import React from 'react';
 import '../scss/custom.scss';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
-import About from './About';
-import Portfolio from '../pages/Portfolio';
-import HomePage from '../pages/HomePage';
-import GraphicDesign from '../pages/GraphicDesign';
+// import About from './About';
+// import Portfolio from '../pages/Portfolio';
+// import HomePage from '../pages/HomePage';
+// import GraphicDesign from '../pages/GraphicDesign';
 
 
 const NavItem = (props) => {

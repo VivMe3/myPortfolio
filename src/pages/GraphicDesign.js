@@ -6,18 +6,33 @@ import FamilyLeavePoster from '../imgs/graphic-design/family-leave.png';
 import DeadlinePoster from '../imgs/graphic-design/deadline.png';
 import ProgramGuide from '../imgs/graphic-design/mathematics-program-guide.jpg';
 import Modal from '../components/Modal';
-import Carousel from '../components/Carousel';
 
 class GraphicDesign extends React.Component {
+    constructor() {
+        super();
+
+        this.state = { index: null, open: false };
+
+    }
+
+
+    openModal3 = (index) => {
+        this.setState({ index: index });
+
+        this.setState({ open: true });
+        this.refs.modalRef.openModal(index);
+
+    }
 
     render() {
-        const imgsUrls = [DesignFlyer, McfEvents];
+
+        const imgsUrls = [DesignFlyer, McfEvents, FamilyLeavePoster];
         return (
             <div>
-            <Modal imgsUrls={imgsUrls}/>
-                
+                <Modal ref="modalRef" imgsUrls={imgsUrls} modalIndex={this.state.index} isOpen={this.state.open} />
+
                 <section>
-                    <h2 className="title">Graphic Design</h2>
+                    <h2 className="title">Graphic Design {this.state.index}</h2>
                 </section>
                 <section className="padded">
                     <div className="container">
@@ -27,18 +42,23 @@ class GraphicDesign extends React.Component {
                                 image={DesignFlyer}
                                 title="Graphic Design Seminar Flyer"
                                 caption="Illustrator"
+                                open={this.openModal3.bind(this, 0)}
+
+
                             />
 
                             <CategoryItem
                                 image={McfEvents}
                                 title="MCF Events Flyer"
                                 caption="Illustrator"
+                                open={this.openModal3.bind(this, 1)}
                             />
 
                             <CategoryItem
                                 image={FamilyLeavePoster}
                                 title="Paid Family Leave Poster"
                                 caption="Illustrator"
+                                open={this.openModal3.bind(this, 2)}
                             />
 
                             <CategoryItem
@@ -58,7 +78,7 @@ class GraphicDesign extends React.Component {
                         </div>
                     </div>
                 </section>
-       
+
             </div>
         )
     }
