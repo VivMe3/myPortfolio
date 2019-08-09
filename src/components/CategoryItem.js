@@ -9,7 +9,6 @@ class CategoryItem extends React.Component {
   }
 
   render() {
-
     return (
       <figure className="col-12 col-sm-12 col-md-6 col-lg-4 port-container">
         <img

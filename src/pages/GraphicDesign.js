@@ -10,29 +10,23 @@ import Modal from '../components/Modal';
 class GraphicDesign extends React.Component {
     constructor() {
         super();
-
         this.state = { index: null, open: false };
-
     }
 
-
-    openModal3 = (index) => {
+    callOpenModal = (index) => {
         this.setState({ index: index });
-
         this.setState({ open: true });
         this.refs.modalRef.openModal(index);
-
     }
 
     render() {
-
-        const imgsUrls = [DesignFlyer, McfEvents, FamilyLeavePoster];
+        const imgsUrls = [DesignFlyer, McfEvents, FamilyLeavePoster, DeadlinePoster, ProgramGuide];
         return (
             <div>
                 <Modal ref="modalRef" imgsUrls={imgsUrls} modalIndex={this.state.index} isOpen={this.state.open} />
 
                 <section>
-                    <h2 className="title">Graphic Design {this.state.index}</h2>
+                    <h2 className="title">Graphic Design</h2>
                 </section>
                 <section className="padded">
                     <div className="container">
@@ -42,23 +36,21 @@ class GraphicDesign extends React.Component {
                                 image={DesignFlyer}
                                 title="Graphic Design Seminar Flyer"
                                 caption="Illustrator"
-                                open={this.openModal3.bind(this, 0)}
-
-
+                                open={this.callOpenModal.bind(this, 0)}
                             />
 
                             <CategoryItem
                                 image={McfEvents}
                                 title="MCF Events Flyer"
                                 caption="Illustrator"
-                                open={this.openModal3.bind(this, 1)}
+                                open={this.callOpenModal.bind(this, 1)}
                             />
 
                             <CategoryItem
                                 image={FamilyLeavePoster}
                                 title="Paid Family Leave Poster"
                                 caption="Illustrator"
-                                open={this.openModal3.bind(this, 2)}
+                                open={this.callOpenModal.bind(this, 2)}
                             />
 
                             <CategoryItem
@@ -66,6 +58,7 @@ class GraphicDesign extends React.Component {
                                 custom={{ height: '90%' }}
                                 title="Course Deadline Poster"
                                 caption="Illustrator"
+                                open={this.callOpenModal.bind(this, 3)}
                             />
 
                             <CategoryItem
@@ -73,12 +66,12 @@ class GraphicDesign extends React.Component {
                                 custom={{ height: '90%' }}
                                 title="Mathematics Program Guide"
                                 caption="InDesign"
+                                open={this.callOpenModal.bind(this, 4)}
                             />
 
                         </div>
                     </div>
                 </section>
-
             </div>
         )
     }
