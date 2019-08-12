@@ -18,7 +18,7 @@ const App = () => {
   return (
     <div>
       <BrowserRouter onUpdate={() => window.scrollTo(0, 0)} basename={process.env.PUBLIC_URL + '/'}>
-      <Switch>
+    <Switch>
         <Route path="/" exact component={HomePage} />
         <Route path="/portfolio" exact component={Portfolio} />
         <Route path="/portfolio/graphic-design" exact component={GraphicDesign} />
@@ -26,8 +26,8 @@ const App = () => {
         <Route path="/portfolio/technica" exact component={Technica} />
         <Route path="/portfolio/videos" exact component={Videos} />
         <Route path="/portfolio/polymer-clay" exact component={PolymerClay} />
-        <Navigation />
         </Switch>
+        <Navigation />
       </BrowserRouter>
     </div>
   );
