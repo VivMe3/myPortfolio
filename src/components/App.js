@@ -17,15 +17,16 @@ import PolymerClay from '../pages/PolymerClay';
 const App = () => {
   return (
     <div>
-      <BrowserRouter onUpdate={() => window.scrollTo(0, 0)} basename={process.env.PUBLIC_URL + '/'}>
+      <BrowserRouter onUpdate={() => window.scrollTo(0, 0)} basename={process.env.PUBLIC_URL}>
     <Switch>
         <Route path="/" exact component={HomePage} />
         <Route path="/portfolio" exact component={Portfolio} />
-        <Route path={process.env.PUBLIC_URL + "/portfolio/graphic-design"} exact component={GraphicDesign} />
+        <Route path="/portfolio/graphic-design" exact component={GraphicDesign} />
         <Route path="/portfolio/hand-done" exact component={HandDone} />
         <Route path="/portfolio/technica" exact component={Technica} />
         <Route path="/portfolio/videos" exact component={Videos} />
         <Route path="/portfolio/polymer-clay" exact component={PolymerClay} />
+        <Route component={() => (<div>404 Not found. help.</div>)} />
         </Switch>
         <Navigation />
       </BrowserRouter>
