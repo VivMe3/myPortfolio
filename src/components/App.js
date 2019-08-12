@@ -17,7 +17,7 @@ import PolymerClay from '../pages/PolymerClay';
 const App = () => {
   return (
     <div>
-      <BrowserRouter onUpdate={() => window.scrollTo(0, 0)} basename={process.env.PUBLIC_URL}>
+      <BrowserRouter onUpdate={() => window.scrollTo(0, 0)} basename={"vivme3.github.io/"}>
     <Switch>
         <Route path="/" exact component={HomePage} />
         <Route path="/portfolio" exact component={Portfolio} />
