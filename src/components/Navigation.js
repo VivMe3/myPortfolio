@@ -24,7 +24,7 @@ const NavItem = (props) => {
     }
     return (
         <li className="nav-item active">
-            <Link className="nav-link" to={props.path}>{props.name}
+            <Link className="nav-link" to={process.env.PUBLIC_URL + props.path}>{props.name}
             </Link>
         </li>
     );
