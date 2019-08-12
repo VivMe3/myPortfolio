@@ -26,7 +26,6 @@ const App = () => {
         <Route path="/portfolio/technica" exact component={Technica} />
         <Route path="/portfolio/videos" exact component={Videos} />
         <Route path="/portfolio/polymer-clay" exact component={PolymerClay} />
-        <Route component={() => (<div>404 Not found. help.</div>)} />
     
         <Navigation />
       </BrowserRouter>
