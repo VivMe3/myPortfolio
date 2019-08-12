@@ -1,6 +1,6 @@
 import React from 'react';
 import '../scss/custom.scss';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 //import { selectImage } from '../actions';
 //import ScrollToTop from './ScrollToTop';
 
@@ -17,8 +17,8 @@ import PolymerClay from '../pages/PolymerClay';
 const App = () => {
   return (
     <div>
-      <BrowserRouter onUpdate={() => window.scrollTo(0, 0)}>
-
+      <BrowserRouter onUpdate={() => window.scrollTo(0, 0)} basename={process.env.PUBLIC_URL + '/'}>
+      <Switch>
         <Route path="/" exact component={HomePage} />
         <Route path="/portfolio" exact component={Portfolio} />
         <Route path="/portfolio/graphic-design" exact component={GraphicDesign} />
@@ -27,7 +27,7 @@ const App = () => {
         <Route path="/portfolio/videos" exact component={Videos} />
         <Route path="/portfolio/polymer-clay" exact component={PolymerClay} />
         <Navigation />
-
+        </Switch>
       </BrowserRouter>
     </div>
   );
