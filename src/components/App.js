@@ -17,8 +17,8 @@ import PolymerClay from '../pages/PolymerClay';
 const App = () => {
   return (
     <div>
-      <BrowserRouter onUpdate={() => window.scrollTo(0, 0)} basename={"vivme3.github.io/"}>
-    <Switch>
+      <BrowserRouter onUpdate={() => window.scrollTo(0, 0)} basename={process.env.PUBLIC_URL}>
+   
         <Route path="/" exact component={HomePage} />
         <Route path="/portfolio" exact component={Portfolio} />
         <Route path="/portfolio/graphic-design" exact component={GraphicDesign} />
@@ -27,7 +27,7 @@ const App = () => {
         <Route path="/portfolio/videos" exact component={Videos} />
         <Route path="/portfolio/polymer-clay" exact component={PolymerClay} />
         <Route component={() => (<div>404 Not found. help.</div>)} />
-        </Switch>
+    
         <Navigation />
       </BrowserRouter>
     </div>
