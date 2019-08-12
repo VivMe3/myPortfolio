@@ -5,7 +5,7 @@ import McfEvents from '../imgs/graphic-design/mcf-events.png';
 import FamilyLeavePoster from '../imgs/graphic-design/family-leave.png';
 import DeadlinePoster from '../imgs/graphic-design/deadline.png';
 import ProgramGuide from '../imgs/graphic-design/mathematics-program-guide.jpg';
-import Modal from '../components/Modal';
+import ProgramGuide2 from '../imgs/graphic-design/mathematics-program-guide-2.jpg';import Modal from '../components/Modal';
 
 class GraphicDesign extends React.Component {
     constructor() {
@@ -20,7 +20,7 @@ class GraphicDesign extends React.Component {
     }
 
     render() {
-        const imgsUrls = [DesignFlyer, McfEvents, FamilyLeavePoster, DeadlinePoster, ProgramGuide];
+        const imgsUrls = [DesignFlyer, McfEvents, FamilyLeavePoster, DeadlinePoster, {1: ProgramGuide, 2: ProgramGuide2}];
         return (
             <div>
                 <Modal ref="modalRef" imgsUrls={imgsUrls} modalIndex={this.state.index} isOpen={this.state.open} />

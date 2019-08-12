@@ -32,13 +32,25 @@ class Carousel extends React.Component {
     }
 
     render() {
-        return (
-            <div className="modalSlides">
-                <div className="prev" direction="left" onClick={this.previousSlide} >&#10094;</div>
-                <img src={this.props.imgsUrls[this.state.currentImageIndex]} alt="" />
-                <div className="next" direction="right" onClick={this.nextSlide} >&#10095;</div>
-            </div>
-        );
+        if (typeof this.props.imgsUrls[this.state.currentImageIndex] === 'object') {
+            return (
+                <div className="modalSlides">
+                    <div className="prev" direction="left" onClick={this.previousSlide} >&#10094;</div>
+                    <img src={this.props.imgsUrls[this.state.currentImageIndex][1]} alt="" />
+                    <img src={this.props.imgsUrls[this.state.currentImageIndex][2]} alt="" />
+                    <div className="next" direction="right" onClick={this.nextSlide} >&#10095;</div>
+                </div>
+            );
+        } else {
+            return (
+                <div className="modalSlides">
+                    <div className="prev" direction="left" onClick={this.previousSlide} >&#10094;</div>
+                    <img src={this.props.imgsUrls[this.state.currentImageIndex]} alt="" />
+                    <div className="next" direction="right" onClick={this.nextSlide} >&#10095;</div>
+                </div>
+            );
+        }
+        
 
 
         // return(

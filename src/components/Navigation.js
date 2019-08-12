@@ -2,6 +2,7 @@ import React from 'react';
 import '../scss/custom.scss';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
+import Logo from '../imgs/vd.png';
 // import About from './About';
 // import Portfolio from '../pages/Portfolio';
 // import HomePage from '../pages/HomePage';
@@ -39,7 +40,7 @@ class Navigation extends React.Component {
             <div>
                 <nav className="navbar fixed-top navbar-expand-lg navbar-light">
                     <a className="navbar-brand" href="/">
-                        &nbsp; <img src="./imgs/vd.png" height="40" alt="Logo" />
+                        &nbsp; <img src={Logo} height="40" alt="Logo" />
                     </a>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>

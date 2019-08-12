@@ -4,7 +4,6 @@ class Contact extends React.Component {
     render() {
         return (
             <div>
-               
                 <section className="footer padded brown" id="Contact">
                     <div className="container">
                         <div className="row">
@@ -16,17 +15,7 @@ class Contact extends React.Component {
                                     <a href="https://www.linkedin.com/in/vivian-thanh-do/"><i className="fa fa-linkedin-square"></i></a>
                                     <a href="https://github.com/VivMe3"><i className="fa fa-github-square"></i></a>
                                 </p>
-                                
-                                
-                                <div><h1>Testing</h1>
                             </div>
-                            <div><h1>Testing</h1></div>
-
-
-
-                            </div>
-                            
-                            
                         </div>
                     </div>
                 </section>
