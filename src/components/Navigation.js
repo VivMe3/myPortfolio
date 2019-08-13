@@ -17,15 +17,15 @@ const NavItem = (props) => {
     if ((props.path) === ('/')) {
         return (
             <li className="nav-item active">
-                <HashLink className="nav-link" to={process.env.PUBLIC_URL + props.path} onClick={() => window.scrollTo(0, 0)}>{props.name}
-                </HashLink>
+                <Link className="nav-link" to={process.env.PUBLIC_URL + props.path} onClick={() => window.scrollTo(0, 0)}>{props.name}
+                </Link>
             </li>
         )
     }
     return (
         <li className="nav-item active">
-            <HashLink className="nav-link" to={process.env.PUBLIC_URL + props.path}>{props.name}
-            </HashLink>
+            <Link className="nav-link" to={process.env.PUBLIC_URL + props.path}>{props.name}
+            </Link>
         </li>
     );
 }

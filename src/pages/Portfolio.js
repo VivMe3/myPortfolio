@@ -23,7 +23,7 @@ render() {
                 <div className="container ">
                     <div className="row wrap">
                         <PortfolioItem 
-                            path="/portfolio/graphic-design" 
+                            path="/graphic-design" 
                             image={DigitalImg} 
                             altText="Digital Graphic" 
                             custom={{width: '90%'}}
@@ -33,7 +33,7 @@ render() {
 
                         
                         <PortfolioItem 
-                            path="/portfolio/hand-done" 
+                            path="/hand-done" 
                             image={HandDoneGraphic} 
                             altText="Hand Done Graphic" 
                             custom={{width: '90%'}}
@@ -42,7 +42,7 @@ render() {
                         </PortfolioItem>
 
                         <PortfolioItem 
-                            path="/portfolio/technica" 
+                            path="technica" 
                             image={TechnicaLogo} 
                             altText="Technica Logo" 
                             custom={{height: '15rem'}}
@@ -51,7 +51,7 @@ render() {
                         </PortfolioItem>
 
                         <PortfolioItem 
-                            path="/portfolio/videos" 
+                            path="videos" 
                             image={VideoGraphic} 
                             altText="Video Graphic" 
                             custom={{width: '18rem'}}
@@ -60,7 +60,7 @@ render() {
                         </PortfolioItem>
 
                         <PortfolioItem 
-                            path="/portfolio/polymer-clay" 
+                            path="/polymer-clay" 
                             image={SculpeyLogo} 
                             altText="Sculpey Logo"
                             custom={{width: '80%'}} 
