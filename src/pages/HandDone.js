@@ -14,6 +14,10 @@ class HandDone extends React.Component {
         this.state = { index: null, open: false };
     }
 
+    componentDidMount() {
+        window.scrollTo(0,0);
+    }
+
     callOpenModal = (index) => {
         this.setState({ index: index });
         this.setState({ open: true });

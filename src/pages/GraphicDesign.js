@@ -12,6 +12,10 @@ class GraphicDesign extends React.Component {
         super();
         this.state = { index: null, open: false };
     }
+    
+    componentDidMount() {
+        window.scrollTo(0,0);
+    }
 
     callOpenModal = (index) => {
         this.setState({ index: index });
