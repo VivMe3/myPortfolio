@@ -24,11 +24,11 @@ const App = () => {
    
         <Route path="/" exact component={HomePage} />
         <Route path="/portfolio" exact component={Portfolio} />
-        <Route path="/graphic-design" exact component={GraphicDesign} />
-        <Route path="/hand-done" exact component={HandDone} />
-        <Route path="/technica" exact component={Technica} />
-        <Route path="/videos" exact component={Videos} />
-        <Route path="/polymer-clay" exact component={PolymerClay} />
+        <Route path="/portfolio/graphic-design" exact component={GraphicDesign} />
+        <Route path="/portfolio/hand-done" exact component={HandDone} />
+        <Route path="/portfolio/technica" exact component={Technica} />
+        <Route path="/portfolio/videos" exact component={Videos} />
+        <Route path="/portfolio/polymer-clay" exact component={PolymerClay} />
     
         <Navigation />
       </BrowserRouter>

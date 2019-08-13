@@ -42,7 +42,7 @@ render() {
                         </PortfolioItem>
 
                         <PortfolioItem 
-                            path="technica" 
+                            path="/technica" 
                             image={TechnicaLogo} 
                             altText="Technica Logo" 
                             custom={{height: '15rem'}}
@@ -51,7 +51,7 @@ render() {
                         </PortfolioItem>
 
                         <PortfolioItem 
-                            path="videos" 
+                            path="/videos" 
                             image={VideoGraphic} 
                             altText="Video Graphic" 
                             custom={{width: '18rem'}}
