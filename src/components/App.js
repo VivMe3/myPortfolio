@@ -20,7 +20,7 @@ const history = createBrowserHistory();
 const App = () => {
   return (
     <div>
-      <BrowserRouter onUpdate={() => window.scrollTo(0, 0)} basename={process.env.PUBLIC_URL}>
+      <BrowserRouter onUpdate={() => window.scrollTo(0, 0)} basename="/myPorfolio">
    
         <Route path="/" exact component={HomePage} />
         <Route path="/portfolio" exact component={Portfolio} />
