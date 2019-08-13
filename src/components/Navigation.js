@@ -35,7 +35,7 @@ class Navigation extends React.Component {
         return (
             <div>
                 <nav className="navbar fixed-top navbar-expand-lg navbar-light">
-                    <a className="navbar-brand" href={"/" + process.env.PUBLIC_URL}>
+                    <a className="navbar-brand" href={"https://vivme3.github.io/myPortfolio/"}>
                         &nbsp; <img src={Logo} height="40" alt="Logo" />
                     </a>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
