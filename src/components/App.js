@@ -1,6 +1,7 @@
 import React from 'react';
 import '../scss/custom.scss';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { createBrowserHistory } from 'history';
 //import { selectImage } from '../actions';
 //import ScrollToTop from './ScrollToTop';
 
@@ -14,14 +15,16 @@ import Technica from '../pages/Technica';
 import Videos from '../pages/Videos';
 import PolymerClay from '../pages/PolymerClay';
 
+const history = createBrowserHistory();
+
 const App = () => {
   return (
     <div>
-      <BrowserRouter onUpdate={() => window.scrollTo(0, 0)} basename={process.env.PUBLIC_URL}>
+      <BrowserRouter onUpdate={() => window.scrollTo(0, 0)} history = {history} basename={process.env.PUBLIC_URL}>
    
         <Route path="/" exact component={HomePage} />
         <Route path="/portfolio" exact component={Portfolio} />
-        <Route path={process.env.PUBLIC_URL + "/portfolio/graphic-design"} exact component={GraphicDesign} />
+        <Route path="/portfolio/graphic-design" exact component={GraphicDesign} />
         <Route path="/portfolio/hand-done" exact component={HandDone} />
         <Route path="/portfolio/technica" exact component={Technica} />
         <Route path="/portfolio/videos" exact component={Videos} />
