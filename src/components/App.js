@@ -20,11 +20,11 @@ const history = createBrowserHistory();
 const App = () => {
   return (
     <div>
-      <BrowserRouter onUpdate={() => window.scrollTo(0, 0)}>
+      <BrowserRouter onUpdate={() => window.scrollTo(0, 0)} basename={process.env.PUBLIC_URL}>
    
         <Route path="/" exact component={HomePage} />
         <Route path="/portfolio" exact component={Portfolio} />
-        <Route path={process.env.PUBLIC_URL + "/portfolio/graphic-design"} exact component={GraphicDesign} />
+        <Route path="/portfolio/graphic-design" exact component={GraphicDesign} />
         <Route path="/portfolio/hand-done" exact component={HandDone} />
         <Route path="/portfolio/technica" exact component={Technica} />
         <Route path="/portfolio/videos" exact component={Videos} />
