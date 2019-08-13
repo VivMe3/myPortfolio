@@ -17,7 +17,7 @@ const NavItem = (props) => {
     if ((props.path) === ('/')) {
         return (
             <li className="nav-item active">
-                <Link className="nav-link" to={props.path} onClick={() => window.scrollTo(0, 0)}>{props.name}
+                <Link className="nav-link" to={process.env.PUBLIC_URL + props.path} onClick={() => window.scrollTo(0, 0)}>{props.name}
                 </Link>
             </li>
         )
